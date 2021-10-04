@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Homemade Health Monitoring Device for Covid-19
 
 You can use the [editor on GitHub](https://github.com/MrMzBlue/HomemadeHealthMonitorCovid/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
