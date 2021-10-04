@@ -24,6 +24,7 @@ What are you going to achieve by the end of the project specifically?
 
 ## Methodology
 ### Phenomena of Interest
+We hope to measure 
 
 ### Sensor(s) Used
 
