@@ -5,7 +5,7 @@
 
 
 ### Introduction
-Write a brief summary of your project
+The homemade health monitoring device for Covid-19 is a device that can monitor people's health. It is measured by the different light transmittances produced by human tissues as blood vessels pulsate. People can use the device at home to measure oxygen saturation and heart rate. It will also upload data to the school (Tartan Test). The school will contact those with abnormal data for further monitoring.
 
 ### Motivation
 Motivate the problem you plan to address
@@ -13,7 +13,11 @@ Motivate the problem you plan to address
 Why is the problem you are addressing important or interesting?
 
 ### Goals
-What are you going to achieve by the end of the project specifically?
+● Measure oxygen saturation
+
+● Measure heart rate
+
+● Upload abnormal data to the school and conduct detailed checks
 
 ## Progress Report (Last Update 10/04/2021)
 ### Current Progress
