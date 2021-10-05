@@ -15,7 +15,9 @@ With the increasing number of novel Coronavirus infections, nucleic acid testing
 
 ● Measure heart rate
 
-● Upload abnormal data to the school and conduct detailed checks
+● Make the data visualizable via LCD
+
+● (Based on time) Transfer the data to cloud storage by leveraging IOT
 
 ## Progress Report (Last Update 10/04/2021)
 ### Current Progress
