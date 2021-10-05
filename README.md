@@ -62,7 +62,7 @@ The only one sensor used in this project is MAX30102 heart rate sensor, which ca
 #### MAX30102
 
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_1.jpg"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_1.jpg?raw=true"/>
 </p>
 <p align="center">Figure 1 MAX30102 heart rate sensor</p>
 
@@ -87,7 +87,7 @@ The only one sensor used in this project is MAX30102 heart rate sensor, which ca
 ● -40°C to +85°C Operating Temperature Range 
 
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_2.png"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_2.png?raw=true"/>
 </p>
 <p align="center">Figure 2 System diagram of MAX30102<sup>[6]</sup></p>
 
@@ -97,11 +97,11 @@ The second part is the digital processing circuit, which filters the original da
 The MAX30102 module applies to photoelectric volume method to measure heart rate and oxygen saturation. The basic principle of photoelectric volume method is to measure pulse and oxygen saturation by using the different light transmission rate caused by human tissues when blood vessels pulsate. The sensor, which consists of a light source and an optical converter, are attached to the patient's finger, wrist or earlobe with straps or clips. The light source is usually led with specific wavelength (red light near 660nm and infrared light near 900nm), which is selective for oxygenated hemoglobin (HbO2) and deoxygenated hemoglobin (Hb) in arterial blood. When the light beam passes through the peripheral blood of the human body, the transmittance of the light changes due to the change of the volume of arterial pulsation congestion. At this time, the photoelectric converter receives the light reflected by the human body tissue, converts it into electrical signal, and amplifies and outputs it. As the pulse is a signal that changes periodically with the beating of the heart, and the volume of the arterial vessels also changes periodically, the change period of the electrical signal of the photoelectric converter is the pulse rate. Meanwhile, according to the definition of blood oxygen saturation, it can be expressed as:
 
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/formula.png"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/formula.png?raw=true"/>
 </p>
 
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_3.jpg"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_3.jpg?raw=true"/>
 </p>
 <p align="center">Figure 3 Absorption of oxygenated hemoglobin (HbO2) and deoxygenated hemoglobin (Hb) at different wavelengths<sup>[7]</sup></p>
 
