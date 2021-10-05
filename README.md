@@ -18,7 +18,7 @@ What are you going to achieve by the end of the project specifically?
 ## Progress Report (Last Update 10/04/2021)
 ### Current Progress
 #### Update - 10/04/2021
-With the help of a Github repo of the package of MAX30100/02 and our code, the sensor is finally light up, we are able to get bpm and oxygen saturation at the same time. Next part will be working on outputting the data and revise codes.
+With the help of a Github repo of the package of MAX30100/02 and our code, the sensor is finally light up, we are able to get bpm and oxygen saturation at the same time. We believe the sampling frequency makes the data abnormal, so it will be tuned in the coming week. At the same time, we started to look into LCD output.
 
 ![Image of BPM&SpO2](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/Output-10-04-2021.png?raw=true)
 
