@@ -5,7 +5,7 @@
 
 
 ### Introduction
-The homemade health monitoring device for Covid-19 is a device that can monitor people's health. It is measured by the different light transmittances produced by human tissues as blood vessels pulsate. People can use the device at home to measure oxygen saturation and heart rate. It will also upload data to the school (Tartan Test). The school will contact those with abnormal data for further monitoring.
+The homemade health monitoring device for Covid-19 is an equipment that can monitor people's health. It is measured by the different light transmittances produced by human tissues as blood vessels pulsate. People can use the device at home to measure their oxygen saturation and heart rate. It will also upload data to the school (Tartan Test). The school will contact those with abnormal data for further monitoring.
 
 ### Motivation
 Motivate the problem you plan to address
