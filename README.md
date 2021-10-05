@@ -87,7 +87,7 @@ The MAX30102 module applies to photoelectric volume method to measure heart rate
 <p align="center">![](http://latex.codecogs.com/svg.latex?\begin SaO〗_2=C_HbO2/(C_HbO2+C_Hb )×100%¬)</p>
 
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_3.png"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_3.jpg"/>
 </p>
 <p align="center">_Figure 3 Absorption of oxygenated hemoglobin (HbO2) and deoxygenated hemoglobin (Hb) at different wavelengths[7]_</p>
 
@@ -105,9 +105,15 @@ The MAX30102 consists of a complete LED and drive part, light sensing and AD con
 
 ## References
 [1] Deborah Leader, R. N. (2021, July 22). The importance of O2 sats with COPD. Verywell Health. Retrieved October 5, 2021, from https://www.verywellhealth.com/oxygen-saturation-914796. 
+
 [2] What you need to know about your blood oxygen level. Banner. (n.d.). Retrieved October 5, 2021, from https://www.bannerhealth.com/healthcareblog/teach-me/blood-oxygen-level-what-you-need-to-know. 
+
 [3] Cameron, M. H., & Monroe, L. G. (2007). Chapter 22 - Vital Signs. In Physical rehabilitation: Evidence-based examination, evaluation, and intervention. essay, Saunders/Elsevier. 
+
 [4] Beckerman, J. (2021, August 18). Heart rate: Normal pulse, Measurement, Max and target heart rate . WebMD. Retrieved October 5, 2021, from https://www.webmd.com/heart-disease/heart-failure/watching-rate-monitor. 
+
 [5] Hansalia, R. (2021, August 18). Does covid-19 cause heart rate issues? Hackensack Meridian Health. Retrieved October 5, 2021, from https://www.hackensackmeridianhealth.org/HealthU/2021/08/18/does-covid-19-cause-heart-rate-issues/. 
+
 [6] MAX30102 high-sensitivity pulse oximeter and heart-rate. (n.d.). Retrieved October 5, 2021, from https://www.maximintegrated.com/en/products/interface/sensor-interface/MAX30102.html. 
+
 [7] MAX30102 initial use and heart rate, blood oxygen measurement principle. Retrieved October 5, 2021, from http://home.eeworld.com.cn/my/space-uid-363835-blogid-589641.html
