@@ -8,9 +8,7 @@
 The homemade health monitoring device for Covid-19 is an equipment that can monitor people's health. It is measured by the different light transmittances produced by human tissues as blood vessels pulsate. People can use the device at home to measure their oxygen saturation and heart rate. It will also upload data to the school (Tartan Test). The school will contact those with abnormal data for further monitoring.
 
 ### Motivation
-Motivate the problem you plan to address
-
-Why is the problem you are addressing important or interesting?
+With the increasing number of novel Coronavirus infections, nucleic acid testing is becoming more and more important. Most people now go to designated locations in the community for unified testing. This method of testing is inconvenient. Conducting a nucleic acid test is not only expensive but also time-consuming. It usually takes one or two days for people to get results. At the same time, unifying testing in one place increases the risk of people getting infected during testing. To make people safer and faster to get the result, the use of self-testing equipment is a good solution. According to the CDC, most Covid-19 patients have low blood oxygen levels. So people can use the homemade health monitoring device for Covid-19 to detect their blood oxygen saturation and heart rate to initially determine whether they are infected with the Coronavirus. 
 
 ### Goals
 ● Measure oxygen saturation
