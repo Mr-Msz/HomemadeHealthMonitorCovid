@@ -62,23 +62,32 @@ The only one sensor used in this project is MAX30102 heart rate sensor, which ca
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_1.jpg"/>
 </p>
-<p align="center">_Figure 1 MAX30102 heart rate sensor_</p>
+<p align="center">*Figure 1 MAX30102 heart rate sensor*</p>
 
 ● Heart-Rate Monitor and Pulse Oximeter Sensor in LED Reflective Solution 
+
 ● Tiny 5.6mm x 3.3mm x 1.55mm 14-Pin Optical Module • Integrated Cover Glass for Optimal, Robust Performance 
+
 ● Ultra-Low Power Operation for Mobile Devices 
+
 •	Programmable Sample Rate and LED Current for Power Savings 
+
 •	Low-Power Heart-Rate Monitor (< 1mW) 
+
 •	Ultra-Low Shutdown Current (0.7μA, typ) 
+
 ● Fast Data Output Capability 
+
 •	High Sample Rates 
+
 ● Robust Motion Artifact Resilience • High SNR 
+
 ● -40°C to +85°C Operating Temperature Range 
 
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_2.png"/>
 </p>
-<p align="center">_Figure 2 System diagram of MAX30102[6]_</p>
+<p align="center">*Figure 2 System diagram of MAX30102[6]*</p>
 
 Figure 2 is the system diagram of MAX30102, which shows that the chip can be divided into two parts. One is the analog signal acquisition circuit, which emits light of a specific wavelength through RED and IR lamps to collect the light reflected back from the human body. The optical signal is converted into electrical signal through PD tube, and finally converted into digital signal through 18-bit ADC converter.
 The second part is the digital processing circuit, which filters the original data converted by ADC and places it in the buffer. The MCU reads and writes the internal registers of the chip through the IIC interface and reads and takes out the corresponding data.
@@ -89,7 +98,7 @@ The MAX30102 module applies to photoelectric volume method to measure heart rate
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_3.jpg"/>
 </p>
-<p align="center">_Figure 3 Absorption of oxygenated hemoglobin (HbO2) and deoxygenated hemoglobin (Hb) at different wavelengths[7]_</p>
+<p align="center">*Figure 3 Absorption of oxygenated hemoglobin (HbO2) and deoxygenated hemoglobin (Hb) at different wavelengths[7]*</p>
 
 The MAX30102 consists of a complete LED and drive part, light sensing and AD conversion part, ambient light interference elimination and digital filtering part, leaving only the digital interface to the user, greatly reducing the user's design burden. The user only needs to read THE FIFO of MAX30102 through hardware I2C or analog I2C interface with the MCU, and then the converted light intensity value can be obtained. The heart rate value and blood oxygen saturation can be obtained by writing the corresponding algorithm.
 
