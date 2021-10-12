@@ -112,7 +112,7 @@ The MAX30102 consists of a complete LED and drive part, light sensing and AD con
 ### Signal Conditioning and Processing
 
 ## Experiments and Results
-1.	Comparison on measurements between Apple Watch Series 6 and MAX30102
+# 1.	Comparison on measurements between Apple Watch Series 6 and MAX30102
 In this part, comparison will be presented on the ability (i.e. accuracy, fluctuation) of measurements over bpm and spo2 using two devices. Before presenting the results, first we will show how the experiments is presented.
 
 In the experiment, one variable is tested each time. This is due to the interface of apple watch only allows user to measure one variable at a time (i.e. bpm or spo2). In order to control the variability and uncertainty in each experiment, the test is going to be present simultaneously to one person in the group:
