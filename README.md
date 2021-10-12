@@ -109,10 +109,10 @@ The MAX30102 module applies to photoelectric volume method to measure heart rate
 
 The MAX30102 consists of a complete LED and drive part, light sensing and AD conversion part, ambient light interference elimination and digital filtering part, leaving only the digital interface to the user, greatly reducing the user's design burden. The user only needs to read THE FIFO of MAX30102 through hardware I2C or analog I2C interface with the MCU, and then the converted light intensity value can be obtained. The heart rate value and blood oxygen saturation can be obtained by writing the corresponding algorithm.
 
-### Signal Conditioning and Processing
+## Signal Conditioning and Processing
 
 ## Experiments and Results
-# 1.	Comparison on measurements between Apple Watch Series 6 and MAX30102
+### 1.	Comparison on measurements between Apple Watch Series 6 and MAX30102
 In this part, comparison will be presented on the ability (i.e. accuracy, fluctuation) of measurements over bpm and spo2 using two devices. Before presenting the results, first we will show how the experiments is presented.
 
 In the experiment, one variable is tested each time. This is due to the interface of apple watch only allows user to measure one variable at a time (i.e. bpm or spo2). In order to control the variability and uncertainty in each experiment, the test is going to be present simultaneously to one person in the group:
