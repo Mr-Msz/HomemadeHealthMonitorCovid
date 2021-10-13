@@ -125,6 +125,8 @@ These frequency differences between two devices lead us to another question on t
 (1)	Send a data point of MAX30102 to Adafruit IO every 3 seconds. Read a measurement from Apple Watch every 3 seconds.
 (2)	Send the average of the past 30 data points (when we use a sampling frequency of 10 Hz, 3 seconds means 30 data points) to Adafruit IO every 3 seconds. Read a measurement from Apple Watch every 3 seconds.
 
+Same procedure is done with the BPM data though the interval changes from 3 to 5 seconds as that is approximately the interval between apple watch shows fluctuations in readings.
+
 In the comparison, we showed the data in a scatter plot where x-axis stands for the measurement of MAX30102 and y-axis stands for the measurement of Apple Watch.
 
 
