@@ -128,7 +128,9 @@ These frequency differences between two devices lead us to another question on t
 
 Same procedure is done with the BPM data though the interval changes from 3 to 5 seconds as that is approximately the interval between apple watch shows fluctuations in readings.
 
-In the comparison, we showed the data in a scatter plot where x-axis stands for the measurement of MAX30102 and y-axis stands for the measurement of Apple Watch.
+In the comparison, we first showed the data in a scatter plot where x-axis stands for the measurement of MAX30102 and y-axis stands for the measurement of Apple Watch.
+
+
 
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_2.png?raw=true"/>
