@@ -28,6 +28,7 @@ With the help of a Github repo of the package of MAX30100/02 and our code, the s
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/Output-10-04-2021.png?raw=true"/>
 </p>
 
+
 #### Update - 10/02/2021
 We received our MAX30102 and began to work on the hardware part of the project. We prepare to work on the paper simultaneously in case we encounter some difficult situation later.
 #### Update - 09/30/2021
@@ -128,6 +129,25 @@ These frequency differences between two devices lead us to another question on t
 Same procedure is done with the BPM data though the interval changes from 3 to 5 seconds as that is approximately the interval between apple watch shows fluctuations in readings.
 
 In the comparison, we showed the data in a scatter plot where x-axis stands for the measurement of MAX30102 and y-axis stands for the measurement of Apple Watch.
+
+<p align="center">
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_2.png?raw=true"/>
+</p>
+
+<p align="center">
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_1.png?raw=true"/>
+</p>
+
+| Variance | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 |
+|  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|  Watch  |2.36|0.56|1.45|1.01|0.69|2.20|0.44|2.89|4.21|
+| MAX30102 |2.60|2.66|15.50|2.23|5.85|16.09|4.27|4.49|0.17|
+
+| Mean | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 |
+|  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|  Watch  |96.80|94.20|96.50|97.70|93.90|97.00| 98.40|95.10|93.70|
+| MAX30102 |97.05|93.20|95.61|98.44|93.37|96.42|98.01|96.09|99.48|
+
 
 
 
