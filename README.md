@@ -93,7 +93,7 @@ The only one sensor used in this project is MAX30102 heart rate sensor, which ca
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_2.png?raw=true"/>
 </p>
-<p align="center">Figure 2 System diagram of MAX30102<sup>[7]</sup></p>
+<p align="center">Figure 2 System diagram of MAX30102</p>
 
 Figure 2 is the system diagram of MAX30102 published by Maxim integrated (n.d.), which shows that the chip can be divided into two parts. One is the analog signal acquisition circuit, which emits light of a specific wavelength through RED and IR lamps to collect the light reflected back from the human body. The optical signal is converted into electrical signal through PD tube, and finally converted into digital signal through 18-bit ADC converter.
 The second part is the digital processing circuit, which filters the original data converted by ADC and places it in the buffer. The MCU reads and writes the internal registers of the chip through the IIC interface and reads and takes out the corresponding data.
@@ -138,13 +138,13 @@ In the comparison, we first showed the data in a scatter plot where x-axis stand
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_1.png?raw=true"/>
 </p>
 
-<p align="center">Figure x. Scatter Plot of spo2 for Group 1-9<sup>[7]</sup></p>
+<p align="center">Figure x. Scatter Plot of spo2 for Group 1-9</p>
 
 
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_2.png?raw=true"/>
 </p>
-<p align="center">Figure x. Scatter Plot of spo2 for Group 10-18<sup>[7]</sup></p>
+<p align="center">Figure x. Scatter Plot of spo2 for Group 10-18</p>
 
 With the help of these graphs, one could easily see that
 
