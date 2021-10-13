@@ -134,14 +134,17 @@ In the comparison, we first showed the data in a scatter plot where x-axis stand
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_1.png?raw=true"/>
 </p>
-<p style="text-align: center;">Figure x. Scatter Plot of spo2 for Group 1-9</p>
+
+<p align="center">Figure x. Scatter Plot of spo2 for Group 1-9<sup>[7]</sup></p>
+
 
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_2.png?raw=true"/>
 </p>
-<p style="text-align: center;">Figure x. Scatter Plot of spo2 for Group 10-18</p>
+<p align="center">Figure x. Scatter Plot of spo2 for Group 10-18<sup>[7]</sup></p>
 
 With the help of these graphs, one could easily see that
+
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_2.png?raw=true"/>
 </p>
