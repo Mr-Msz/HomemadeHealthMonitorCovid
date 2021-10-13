@@ -93,7 +93,7 @@ The only one sensor used in this project is MAX30102 heart rate sensor, which ca
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_2.png?raw=true"/>
 </p>
-<p align="center">Figure 2 System diagram of MAX30102
+<p align="center">Figure 2 System diagram of MAX30102<sup>[7]</sup></p>
 
 Figure 2 is the system diagram of MAX30102 published by Maxim integrated (n.d.), which shows that the chip can be divided into two parts. One is the analog signal acquisition circuit, which emits light of a specific wavelength through RED and IR lamps to collect the light reflected back from the human body. The optical signal is converted into electrical signal through PD tube, and finally converted into digital signal through 18-bit ADC converter.
 The second part is the digital processing circuit, which filters the original data converted by ADC and places it in the buffer. The MCU reads and writes the internal registers of the chip through the IIC interface and reads and takes out the corresponding data.
@@ -112,6 +112,9 @@ The MAX30102 module applies to photoelectric volume method to measure heart rate
 The MAX30102 consists of a complete LED and drive part, light sensing and AD conversion part, ambient light interference elimination and digital filtering part, leaving only the digital interface to the user, greatly reducing the user's design burden. The user only needs to read THE FIFO of MAX30102 through hardware I2C or analog I2C interface with the MCU, and then the converted light intensity value can be obtained. The heart rate value and blood oxygen saturation can be obtained by writing the corresponding algorithm.
 
 ## Signal Conditioning and Processing
+
+
+
 
 ## Experiments and Results
 ### 1.	Comparison on measurements between Apple Watch Series 6 and MAX30102
