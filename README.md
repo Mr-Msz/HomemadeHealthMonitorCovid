@@ -268,8 +268,7 @@ We did five additional groups of testing, and the comparison is shown in Figure 
     <td>Doe</td>
     <td>80</td>
   </tr>
-</table>
-.center {
+</table>.center {
   margin-left: auto;
   margin-right: auto;
 }
