@@ -178,12 +178,15 @@ Compares to Apple Watch and other oximeter on market right now, our device measu
 So, we decided to add a cap on the top of our device to see if it would efficiently increase performance:
 
 We did five additional groups of testing:
-|Group 19-23            |
-|:-------------------------:|
-|![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/additiona_test.png?raw=true)|
+Group 19-23            |
+:-------------------------:|
+![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/additiona_test.png?raw=true)|
+
 | Variance | #19 | #20 | #21 | #22 | #23 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|
-|  Watch  |5.57|4.23|4.31|5.04|1.92|
+|  Watch  |1.00|0.36|0.36|0.49|0.49|
+|  MAX30102  |5.57|4.23|4.31|5.04|1.92|
+
 
 ### Code
 ```markdown
