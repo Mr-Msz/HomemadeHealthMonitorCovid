@@ -226,14 +226,19 @@ Since we currently don’t have ways to obtain the “true labels”, we used Ap
 
 Compared to Apple Watch and other oximeter on market right now, our device measures the light reflection in an **‘open’** environment. Those devices tend to use model characteristics to ensure interference from environment to be as little as possible (i.e., on market oximeter let users put their fingertips into a hole-shape area to ensure full contact and prevent light leak).
 
-So, we decided to add a cap on the top of our device to see if it would efficiently increase performance:
+So, we decided to add a cap on the top of our device to see if it would efficiently increase performance. Figure 12 shows how the cap worked on our device.
 
-We did five additional groups of testing, and the comparison is shown in Figure 12 and Table 3.
+<p align="center">
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/3_1.png?raw=true"/>
+</p>
+<p align="center">Figure 12 Closed environment desgined to the device</p>
+
+We did five additional groups of testing, and the comparison is shown in Figure 13 and Table 3.
 
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/additiona_test.png?raw=true"/>
 </p>
-<p align="center">Figure 12 Comparison of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
+<p align="center">Figure 13 Comparison of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
 
 <p align="center">Table 3 Variance comparision</p>
 
