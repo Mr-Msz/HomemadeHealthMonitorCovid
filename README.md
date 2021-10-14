@@ -170,71 +170,65 @@ However, there is a problem that the frequency is too high for the IoT device to
 Figure 8 shows how the data is displayed on the Adafruit IO platform. There are two feeds, respectively taking the heart rate and oxygen saturation. The block on the left shows the real-time heart rate in bpm. If the value is over 100 or lower than 60, the gauge block will warn in red. Similarly, the other gauge block is for oxygen saturation (SpO2), warning when the value is lower than 90. After the sensing process stops at the given time, the last pair of values uploaded to the IoT device is the average heart rate and oxygen saturation in the period. That is, users can directly read their average health indices by looking at the final values appearing in the dashboard.
 
 ### 2.	Comparison on measurements between Apple Watch Series 6 and MAX30102
-In this part, comparison will be presented on the ability (i.e. accuracy, fluctuation) of measurements over bpm and spo2 using two devices. Before presenting the results, first we will show how the experiments is presented.
+In this part, comparison will be presented on the ability (i.e. accuracy, fluctuation) of measurements over heart rate (BPM) and oxygen saturation (SpO2) using two devices. Before presenting the results, first we will show how the experiments is presented.
 
-In the experiment, one variable is tested each time. This is due to the interface of apple watch only allows user to measure one variable at a time (i.e. bpm or spo2). In order to control the variability and uncertainty in each experiment, the test is going to be present simultaneously to one person in the group:
+In the experiment, one variable is tested each time. This is due to the interface of apple watch only allows user to measure one variable at a time (i.e. BPM or SpO2). In order to control the variability and uncertainty in each experiment, the test is going to be present simultaneously to one person in the group:
 
-The measurements of apple watch will be documented manually due to the easy accessibility (i.e. barely looking) and relative slow reaction speed (It takes 15 seconds for Apple Watch to return a spo2 reading). The measurements of MAX30102 will be documented by Adafruit IO platforms.
+The measurements of apple watch will be documented manually due to the easy accessibility (i.e. barely looking) and relative slow reaction speed (It takes 15 seconds for Apple Watch to return a SpO2 reading). The measurements of MAX30102 will be documented by Adafruit IO platforms.
 
-These frequency differences between two devices lead us to another question on the evaluation process. It is not possible to compare raw data. Every data we gather from Apple Watch, approximately 150 data points for MAX30102 will be gathered at the same time. We use the following two ways to keep data from two devices on the same pace:
+These frequency differences between two devices lead us to another question on the evaluation process. It is not possible to compare the raw data. Every data we gather from Apple Watch, approximately 150 data points for MAX30102 will be gathered at the same time. We use the following two ways to keep data from two devices on the same pace:
 
 (1)	Send a data point of MAX30102 to Adafruit IO every 3 seconds. Read a measurement from Apple Watch every 15 seconds. Compares the average of 5 data points send to Adfruit IO with Apple Watch Reading(Group 1-9).
 
 (2)	Send the **average** (due to the receive restriction of Adafruit IO) of the past 150 data points (when we use a sampling frequency of 10 Hz, 15 seconds means 150 data points) to Adafruit IO every 15 seconds. Read a measurement from Apple Watch every 15 seconds (Group 10-18).
 Each group has 10 data points (10 times consecutive 15 seconds of measurement for each group).
 
-Same procedure is done with the BPM data though the interval changes from 3 to 5 seconds instead of 15 seconds (Unlike spo2, BPM on Apple Watch changes with real time) as that is approximately the interval between apple watch shows fluctuations in readings.
+Same procedure is done with the BPM data though the interval changes from 3 to 5 seconds instead of 15 seconds (Unlike SpO2, BPM on Apple Watch changes with real time) as that is approximately the interval between apple watch shows fluctuations in readings.
 
-In the comparison, we used spo2 data and we first showed the data in a scatter plot where x-axis stands for the measurement of MAX30102 and y-axis stands for the measurement of Apple Watch. The red line in each subplots stands for y=x.
+In the comparison, we used SpO2 data and we first showed the data in a scatter plot where x-axis stands for the measurement of MAX30102 and y-axis stands for the measurement of Apple Watch in Figure 10. The red line in each subplots stands for y=x.
 
 Group 1-9             |  Group 10-18
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_2.png?raw=true)
-
+<p align="center">Figure 10 Comparison of SpO2 sensed by MAX30102 and Apple Watch</p>
 
 With the help of these graphs, one could easily see that with the help of a wider averaging window, the data points stay closer towards the baseline (red line which means two devices returns the same measurements at the same time). Although the principle it uses is not exactly Simple Moving Average (SMA), the outcome is close, which is smoothen the signal and filtered those data points that are out of the ordinary. To be more specific, combining the practical situations, it acts like a high-pass filter without a settled cutoff frequency.
 
-
-Same kind of difference can be found if data points from two devices of same group are plotted separately. The Pearson correlation coefficient can be found at the top of each subplot in the figures below (PLEASE RIGHT CLICK THE GRAPH AND OPEN IT IN A NEW TAB FOR A BETTER VIEWING EXPERIENCE).
+Same kind of difference can be found if data points from two devices of same group are plotted separately. The Pearson correlation coefficient can be found at the top of each subplot in Figure 11 (PLEASE RIGHT CLICK THE GRAPH AND OPEN IT IN A NEW TAB FOR A BETTER VIEWING EXPERIENCE).
 
 Group 1-9             |  Group 10-18
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_2.png?raw=true)
 blue:MAX30102   orange:Apple Watch |blue:MAX30102   orange:Apple Watch 
+<p align="center">Figure 11 The Pearson correlation coefficient of SpO2 sensed by MAX30102 and Apple Watch</p>
 
-So, for further comparison we will use data from group 10 to group 18:
+So, for further comparison we will use data from group 10 to group 18. Table 1 and Table 2 respectively show the mean value and variance comparison of the data collected by MAX30102 and Apple Watch.
 
-Mean Comparison:
-
+<p align="center">Table 1 Mean comparison of SpO2 sensed by MAX30102 and Apple Watch</p>
 | Mean | #10 | #11 | #12 | #13 | #14 | #15 | #16 | #17 | #18 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |  Watch  |96.80|94.20|96.50|97.70|93.90|97.00| 98.40|95.10|93.70|
 | MAX30102 |97.05|93.20|95.61|98.44|93.37|96.42|98.01|96.09|99.48|
 | Error[%] |0.26|1.06|0.92|0.76|0.57|0.59|0.40|1.04|6.17|
 
-Variance Comparison
-
+<p align="center">Table 2 Variance comparision of SpO2 sensed by MAX30102 and Apple Watch</p>
 | Mean | #10 | #11 | #12 | #13 | #14 | #15 | #16 | #17 | #18 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |  Watch  |2.36|0.56|1.45|1.01|0.69|2.20|0.44|2.89|4.21|
 | MAX30102 |2.60|2.66|15.50|2.23|5.85|16.09|4.27|4.49|0.17|
 
+Since we currently don’t have ways to obtain the “true labels”, we used Apple Watch’s measurements as our **true label**. It turns out, apart from group 18, all other groups lie within an error of 1.1% on the mean value. However, such pattern doesn’t mean Vanilla MAX30102 is comparable in stability towards Apple Watch. This is because the variance difference between two devices in a same group could have huge fluctuations over groups. We tried to change sample rate and averaging window (These two must change simultaneously under our comparison rule) to address this problem, which didn’t give us an answer. After consideration, we brought out a hypothesis:
 
-
-
-Since we currently don’t have ways to obtain “true labels”, we used Apple Watch’s measurements as our **true label**. It turns out, apart from group 18, all other groups lie within an error of 1.1% on the mean value. However, such pattern doesn’t mean Vanilla MAX30102 is comparable in stability towards Apple Watch. This is because the variance difference between two devices in a same group could have huge fluctuations over groups. We tried to change sample rate and averaging window (These two must change simultaneously under our comparison rule) to address this problem, which didn’t give us an answer. After consideration, we brought out a hypothesis:
-
-Compares to Apple Watch and other oximeter on market right now, our device measures the light reflection in an **‘open’** environment. Those devices tend to use model characteristics to ensure interference from environment to be as little as possible (i.e., on market oximeter let users put their fingertips into a hole-shape area to ensure full contact and prevent light leak).
+Compared to Apple Watch and other oximeter on market right now, our device measures the light reflection in an **‘open’** environment. Those devices tend to use model characteristics to ensure interference from environment to be as little as possible (i.e., on market oximeter let users put their fingertips into a hole-shape area to ensure full contact and prevent light leak).
 
 So, we decided to add a cap on the top of our device to see if it would efficiently increase performance:
 
+We did five additional groups of testing, and the comparison is shown in Figure 12 and Table 3.
 
+![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/additiona_test.png?raw=true)
+<p align="center">Figure 12 Comparison of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
 
-We did five additional groups of testing:
-Group 19-23            |
-:-------------------------:|
-![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/additiona_test.png?raw=true)|
-
+<p align="center">Table 3 Variance comparision of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p
 | Variance | #19 | #20 | #21 | #22 | #23 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|
 |  Watch  |1.00|0.36|0.36|0.49|0.49|
