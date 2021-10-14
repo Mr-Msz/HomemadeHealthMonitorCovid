@@ -231,12 +231,18 @@ Group 19-23            |
 After adding a relatively closed environment, the variance of data measured by MAX30102 is still significantly higher than Apple Watch. We haven't yet found the reason. As for accuracy, we believe MAX30102 could give relatively accurate (less than 2% error) outputs under the right operations.
 
 ### 3. Email Alerts
-In this part, we will add email sending alert feature. The original thought is send an email whenever a single data point is out of the ordinary (email is sent whenever a spo2 data point is smaller than 90). It turns out, even with the receive restriction of Adafruit IO, a 15 second measurement with 10 Hz sampling rate results in multiple email being sent because of the variance we discussed in previous section:
+In this part, we will add email sending alert feature. With the help of [IFTTT](https://ifttt.com/), email and Adafruit IO is easily connected. The original thought is send an email whenever a single data point is out of the ordinary (email is sent if spo2 < 90). It turns out, even with the receive restriction of Adafruit IO, a 15 second measurement with 10 Hz sampling rate results in multiple email being sent because of the variance we discussed in previous section:
 
 Emails Received            |  Email Content
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email2.png?raw=true)
 6 emails were received in one measurements | Each email looks like this 
+
+As this is highly inconvenient and inaccurate, instead, we add another feed in Adafruit IO to document the proportion of abnormal data (spo2 < 80) of each 15 seconds measurement window. If this value is higher than 0.5, we will send one alert. This ensures at most one alert is sent during each measurement:
+
+Email Content           |  
+:-------------------------:|
+![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email3.png?raw=true) |
 
 
 ### Code
