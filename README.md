@@ -226,23 +226,23 @@ We did five additional groups of testing, and the comparison is shown in Figure 
 <p align="center">Figure 13 Comparison of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
 
 Table 3 Variance comparision
+
 | Variance | #19 | #20 | #21 | #22 | #23 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|
 |  Watch  |1.00|0.36|0.36|0.49|0.49|
 |  MAX30102  |5.57|4.23|4.31|5.04|1.92|
 
 
-
-
 After adding a relatively closed environment, the variance of data measured by MAX30102 is still significantly higher than Apple Watch. We haven't yet found the reason. As for accuracy, we believe MAX30102 could give relatively accurate (less than 2% error) outputs under the right operations.
 
 ### 3. Email Alerts
-In this part, we will add email sending alert feature. With the help of [IFTTT](https://ifttt.com/), email and Adafruit IO is easily connected. The original thought is send an email whenever a single data point is out of the ordinary (email is sent if spo2 < 90). It turns out, even with the receive restriction of Adafruit IO, a 15 second measurement with 10 Hz sampling rate results in multiple email being sent because of the variance we discussed in previous section:
+In this part, we will add email sending alert feature. With the help of [IFTTT](https://ifttt.com/), email and Adafruit IO is easily connected. The original thought is send an email whenever a single data point is out of the ordinary (email is sent if spo2 < 90). It turns out, even with the receive restriction of Adafruit IO, a 15 second measurement with 10 Hz sampling rate results in multiple email being sent because of the variance we discussed in previous section. Figures 14 show the emails received.
 
 Emails Received            |  Email Content
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email2.png?raw=true)
 6 emails were received in one measurements | Each email looks like this 
+<p align="center">Figure 14 Alert emails received</p>
 
 As this is highly inconvenient and inaccurate, instead, we add another feed in Adafruit IO to document the **proportion** of abnormal data (spo2 < 80) of each 15 seconds measurement window. If this proportion is higher than 0.5, we will send one alert. This ensures at most one alert is sent during each measurement:
 
@@ -250,7 +250,9 @@ Email Content           |
 :-------------------------:|
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email3.png?raw=true) |
 
-The attached link is the tartan test information page.
+<p align="center">Figure 15 Updated Alert email</p>
+
+Figure 15 is how the updated alert email is like. The attached link is the tartan test information page.
 
 ### Code
 ```markdown
