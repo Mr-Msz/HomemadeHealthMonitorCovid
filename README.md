@@ -20,6 +20,10 @@ With the increasing number of novel Coronavirus infections, nucleic acid testing
 
 ● (Based on time) Transfer the data to cloud storage by leveraging IOT
 
+● Compare the device with products already on the market 
+
+● Send email alerts to people with abnormal data
+
 ## Progress Report (Last Update 10/04/2021)
 ### Current Progress
 #### Update - 10/04/2021
