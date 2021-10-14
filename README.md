@@ -123,18 +123,18 @@ In this part, comparison will be presented on the ability (i.e. accuracy, fluctu
 In the experiment, one variable is tested each time. This is due to the interface of apple watch only allows user to measure one variable at a time (i.e. bpm or spo2). In order to control the variability and uncertainty in each experiment, the test is going to be present simultaneously to one person in the group:
 
 
-The measurements of apple watch will be documented manually due to the easy accessibility (i.e. barely looking) and relative slow reaction speed (the frequency of updates on screen is about 0.25 – 0.5 Hz (2 - 4 seconds) based on the situation of the tester). The measurements of MAX30102 will be documented by Adafruit IO platforms.
+The measurements of apple watch will be documented manually due to the easy accessibility (i.e. barely looking) and relative slow reaction speed (It takes 15 seconds for Apple Watch to return a spo2 reading). The measurements of MAX30102 will be documented by Adafruit IO platforms.
 
-These frequency differences between two devices lead us to another question on the evaluation process. It is not possible to compare raw data. Every data we gather from Apple Watch, approximately 10 data points for MAX30102 will be gathered at the same time. We use the following two ways to keep data from two devices on the same pace:
+These frequency differences between two devices lead us to another question on the evaluation process. It is not possible to compare raw data. Every data we gather from Apple Watch, approximately 150 data points for MAX30102 will be gathered at the same time. We use the following two ways to keep data from two devices on the same pace:
 
-(1)	Send a data point of MAX30102 to Adafruit IO every 3 seconds. Read a measurement from Apple Watch every 3 seconds (Group 1-9).
+(1)	Send a data point of MAX30102 to Adafruit IO every 3 seconds. Read a measurement from Apple Watch every 15 seconds. Compares the average of 5 data points send to Adfruit IO with Apple Watch Reading(Group 1-9).
 
-(2)	Send the average of the past 30 data points (when we use a sampling frequency of 10 Hz, 3 seconds means 30 data points) to Adafruit IO every 3 seconds. Read a measurement from Apple Watch every 3 seconds (Group 10-18).
-Each group has 10 data points (30 seconds of measurement for each group).
+(2)	Send the **average** (due to the receive restriction of Adafruit IO) of the past 150 data points (when we use a sampling frequency of 10 Hz, 15 seconds means 150 data points) to Adafruit IO every 15 seconds. Read a measurement from Apple Watch every 15 seconds (Group 10-18).
+Each group has 10 data points (10 times consecutive 15 seconds of measurement for each group).
 
-Same procedure is done with the BPM data though the interval changes from 3 to 5 seconds as that is approximately the interval between apple watch shows fluctuations in readings.
+Same procedure is done with the BPM data though the interval changes from 3 to 5 seconds instead of 15 seconds (Unlike spo2, BPM on Apple Watch changes with real time) as that is approximately the interval between apple watch shows fluctuations in readings.
 
-In the comparison, we first showed the data in a scatter plot where x-axis stands for the measurement of MAX30102 and y-axis stands for the measurement of Apple Watch. The red line in each subplots stands for y=x.
+In the comparison, we used spo2 data and we first showed the data in a scatter plot where x-axis stands for the measurement of MAX30102 and y-axis stands for the measurement of Apple Watch. The red line in each subplots stands for y=x.
 
 Group 1-9             |  Group 10-18
 :-------------------------:|:-------------------------:
