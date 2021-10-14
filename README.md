@@ -134,17 +134,9 @@ Same procedure is done with the BPM data though the interval changes from 3 to 5
 
 In the comparison, we first showed the data in a scatter plot where x-axis stands for the measurement of MAX30102 and y-axis stands for the measurement of Apple Watch. The red line in each subplots stands for y=x.
 
-<p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_1.png?raw=true"/>
-</p>
-
-<p align="center">Figure x. Scatter Plot of spo2 for Group 1-9</p>
-
-
-<p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_2.png?raw=true"/>
-</p>
-<p align="center">Figure x. Scatter Plot of spo2 for Group 10-18</p>
+Group 1-9             |  Group 10-18
+:-------------------------:|:-------------------------:
+![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_2.png?raw=true)
 
 With the help of these graphs, one could easily see that
 
