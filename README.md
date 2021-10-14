@@ -149,7 +149,7 @@ Same kind of difference can be found if data points from two devices of same gro
 Group 1-9             |  Group 10-18
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_2.png?raw=true)
-blue:MAX30102 orange:Apple Watch |blue:MAX30102 orange:Apple Watch 
+blue:MAX30102   orange:Apple Watch |blue:MAX30102   orange:Apple Watch 
 
 So, for further comparison we will use data from group 10 to group 18:
 
