@@ -247,6 +247,33 @@ We did five additional groups of testing, and the comparison is shown in Figure 
 |  Watch  |1.00|0.36|0.36|0.49|0.49|
 |  MAX30102  |5.57|4.23|4.31|5.04|1.92|
 
+<table class="center">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 After adding a relatively closed environment, the variance of data measured by MAX30102 is still significantly higher than Apple Watch. We haven't yet found the reason. As for accuracy, we believe MAX30102 could give relatively accurate (less than 2% error) outputs under the right operations.
 
 ### 3. Email Alerts
