@@ -148,7 +148,7 @@ In experiments, we found that the detected values are quite unstable, so that it
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2-3.png?raw=true"/>
 </p>
-<p align="center">Figure 7 Outputs of sensed data in the terminal in the end</p>
+<p align="center">Figure 7 Outputs of averaged sensed data in the terminal</p>
 
 Furthermore, if the average both the heart rate and oxygen saturation are out of the normal range (bpm in the range of (60, 100) and SpO2 in the range of (90, 100)), additional message “Danger!” will also show up in the terminal to warn the users.
 
