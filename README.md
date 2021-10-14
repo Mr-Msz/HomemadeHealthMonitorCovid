@@ -8,6 +8,7 @@ Group Member: Sizhen Ma, Wenzhuo Sun, Zirui Chen, Shuhan Yang
 
 ### Introduction
 The homemade health monitoring device for COVID-19 is an equipment that can monitor people's health. It is measured by the different light transmittances produced by human tissues as blood vessels pulsate. People can use the device at home to measure their oxygen saturation and heart rate. It will also upload data to the community. The community will contact those with abnormal data for further detection.
+
 Through the use of this homemade health monitoring device, communities and social organizations such as schools can better monitor the health status of users and thus check the status of patients as early as possible to reduce the spread of COVID-19 and to treat them earlier.
 
 ### Motivation
@@ -17,8 +18,6 @@ With the increasing number of novel Coronavirus infections, nucleic acid testing
 ● Measure oxygen saturation
 
 ● Measure heart rate
-
-● Make the data visualizable via LCD
 
 ● (Based on time) Transfer the data to cloud storage by leveraging IOT
 
@@ -78,7 +77,9 @@ The only one sensor used in this project is MAX30102 heart rate sensor, which ca
 
 ● Heart-Rate Monitor and Pulse Oximeter Sensor in LED Reflective Solution 
 
-● Tiny 5.6mm x 3.3mm x 1.55mm 14-Pin Optical Module • Integrated Cover Glass for Optimal, Robust Performance 
+● Tiny 5.6mm x 3.3mm x 1.55mm 14-Pin Optical Module 
+
+ - Integrated Cover Glass for Optimal, Robust Performance 
 
 ● Ultra-Low Power Operation for Mobile Devices 
 
@@ -92,7 +93,9 @@ The only one sensor used in this project is MAX30102 heart rate sensor, which ca
 
  - High Sample Rates 
 
-● Robust Motion Artifact Resilience • High SNR 
+● Robust Motion Artifact Resilience 
+
+ - High SNR 
 
 ● -40°C to +85°C Operating Temperature Range 
 
@@ -119,28 +122,33 @@ The MAX30102 consists of a complete LED and drive part, light sensing and AD con
 
 ## Signal Conditioning and Processing
 
-Firstly, we set up the heart rate sensor MAX30102 to make sure if it could work as expected. As it is the only sensor used in this project, we directly connected the sensor to the RPi on the breadboard as shown in Figure 1. Only four pins were used, connecting to VCC 5V, SDA, SCL and GND, so that the sensor could get powered and send the data to our RPi. When we start sensing, we can simply put our finger onto the sensor.
+Firstly, we set up the heart rate sensor MAX30102 to make sure if it could work as expected. As it is the only sensor used in this project, we directly connected the sensor to the RPi on the breadboard as shown in Figure 4. Only four pins were used, connecting to VCC 5V, SDA, SCL and GND, so that the sensor could get powered and send the data to our RPi. When we start sensing, we can simply put our finger onto the sensor, as shown in Figure 5.
 
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_1.jpg?raw=true"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2_1_1.JPG?raw=true"/>
 </p>
-<p align="center">Figure 1 Circuit for MAX30102 sensor</p>
-<p align="center">* Remaining to be updated</p>
+<p align="center">Figure 4 Circuit for MAX30102 sensor</p>
 
-Then, we coded to have the sensor collect data. Based on the instructions provided by Maxim Integrated, applying to max30102 library, we developed our own codes to calculate and output the sensed values in the terminal at a sampling frequency of 100 Hz. If the finger is not detected, a message of “Finger not detected” will show up in the terminal and the default values of heart rate and oxygen saturation are 0 and -999, which indicate unsuccessful data collection. If the data is successfully detected, every pair of values detected will be printed out as shown in Figure 2.
+<p align="center">
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2_1_2.JPG?raw=true"/>
+</p>
+<p align="center">Figure 5 Sensing with a finger</p>
+
+Then, we coded to have the sensor collect data. Based on the instructions provided by Maxim Integrated, applying to max30102 library, we developed our own codes to calculate and output the sensed values in the terminal at a sampling frequency of 100 Hz. If no finger is detected, a message of “Finger not detected” will show up in the terminal and the default values of heart rate and oxygen saturation are 0 and -999, which indicate unsuccessful data collection. If the data is successfully detected, every pair of values detected will be printed out as shown in Figure 6.
 
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2-2.png?raw=true"/>
 </p>
-<p align="center">Figure 2 Outputs of sensed data in the terminal</p>
+<p align="center">Figure 6 Outputs of sensed data in the terminal</p>
 
 In default, the sensing process lasts for 30 seconds, but it can run for any time as told in the command line with “-t”. In general, to better detect the heart rate and oxygen saturation, we ran the sensor for 60 seconds in the following tests.
-In experiments, we found that the detected values are quite unstable, so that it’s hard to judge if the indices are in the normal range. Therefore, we decided to calculate the average values in the sensing period and take them as the results. We then extended the self-designed class for max30102 to store all the data collected and compute for average before stopping the sensor. As the default values are 0 and -999, they will largely influence the average values. That’s why we excluded the extreme values (SpO2 lower than 80) before calculating the average. The averages will also be printed out in the terminal before sensor stops. Figure 3 shows the terminal at the end of the sensing process.
+
+In experiments, we found that the detected values are quite unstable, so that it’s hard to judge if the indices are in the normal range. Therefore, we decided to calculate the average values in the sensing period and take them as the results. We then extended the self-designed class for max30102 to store all the data collected and compute for average before stopping the sensor. As the default values are 0 and -999, they will largely influence the average values. That’s why we excluded the extreme values (SpO2 lower than 80) before calculating the average. The averages will also be printed out in the terminal before sensor stops. Figure 7 shows the terminal interface at the end of the sensing process.
  
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2-3.png?raw=true"/>
 </p>
-<p align="center">Figure 3 Outputs of sensed data in the terminal in the end</p>
+<p align="center">Figure 7 Outputs of sensed data in the terminal in the end</p>
 
 Furthermore, if the average both the heart rate and oxygen saturation are out of the normal range (bpm in the range of (60, 100) and SpO2 in the range of (90, 100)), additional message “Danger!” will also show up in the terminal to warn the users.
 
@@ -157,16 +165,14 @@ However, there is a problem that the frequency is too high for the IoT device to
 <p align="center">
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2-4.png?raw=true"/>
 </p>
-<p align="center">Figure 4 Dashboard Interface</p>
-<p align="center">* Remaining to be updated</p>
+<p align="center">Figure 8 Dashboard Interface</p>
 
-Figure 4 shows how the data is displayed on the Adafruit IO platform. There are two feeds, respectively taking the heart rate and oxygen saturation. The block on the left shows the real-time heart rate in bpm. If the value is over 100 or lower than 60, the gauge block will warn in red. Similarly, the other gauge block is for oxygen saturation (SpO2), warning when the value is lower than 90. After the sensing process stops at the given time, the last pair of values uploaded to the IoT device is the average heart rate and oxygen saturation in the period. That is, users can directly read their average health indices by looking at the final values appearing in the dashboard.
+Figure 8 shows how the data is displayed on the Adafruit IO platform. There are two feeds, respectively taking the heart rate and oxygen saturation. The block on the left shows the real-time heart rate in bpm. If the value is over 100 or lower than 60, the gauge block will warn in red. Similarly, the other gauge block is for oxygen saturation (SpO2), warning when the value is lower than 90. After the sensing process stops at the given time, the last pair of values uploaded to the IoT device is the average heart rate and oxygen saturation in the period. That is, users can directly read their average health indices by looking at the final values appearing in the dashboard.
 
 ### 2.	Comparison on measurements between Apple Watch Series 6 and MAX30102
 In this part, comparison will be presented on the ability (i.e. accuracy, fluctuation) of measurements over bpm and spo2 using two devices. Before presenting the results, first we will show how the experiments is presented.
 
 In the experiment, one variable is tested each time. This is due to the interface of apple watch only allows user to measure one variable at a time (i.e. bpm or spo2). In order to control the variability and uncertainty in each experiment, the test is going to be present simultaneously to one person in the group:
-
 
 The measurements of apple watch will be documented manually due to the easy accessibility (i.e. barely looking) and relative slow reaction speed (It takes 15 seconds for Apple Watch to return a spo2 reading). The measurements of MAX30102 will be documented by Adafruit IO platforms.
 
