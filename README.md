@@ -13,7 +13,7 @@ The homemade health monitoring device for COVID-19 is an equipment that can moni
 With the increasing number of novel Coronavirus infections, nucleic acid testing is becoming more and more important. Most people now go to designated locations in the community for unified testing. This method of testing is inconvenient. Conducting a nucleic acid test is not only expensive but also time-consuming. It usually takes one or two days for people to get results. At the same time, unifying testing in one place increases the risk of people getting infected during testing. To make people safer and faster to get the result, the use of self-testing equipment is a good solution. According to the CDC, most COVID-19 patients have low blood oxygen levels. So our team created a homemade COVID-19 health monitoring device to detect people’s blood oxygen saturation and heart rate to initially determine whether they are infected with the Coronavirus. If the device detects that someone’s blood oxygen concentration or heart rate is different from the normal level, it will upload the data to the community, and the community will contact him for further detection. Finally, to test the accuracy and practicality of the device, our team compare it with Apple Watch, which can detect blood oxygen and heart rate.
 
 ### Goals
-● Measure oxygen saturation
+● Measure blood oxygen saturation
 
 ● Measure heart rate
 
