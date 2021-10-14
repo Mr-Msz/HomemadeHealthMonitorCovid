@@ -206,7 +206,7 @@ blue:MAX30102   orange:Apple Watch |blue:MAX30102   orange:Apple Watch
 
 So, for further comparison we will use data from group 10 to group 18. Table 1 and Table 2 respectively show the mean value and variance comparison of the data collected by MAX30102 and Apple Watch.
 
-<p align="center">Table 1 Mean comparison of SpO2 sensed by MAX30102 and Apple Watch</p>
+<p align="center">Table 1 Mean comparison</p>
 
 | Mean | #10 | #11 | #12 | #13 | #14 | #15 | #16 | #17 | #18 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -214,7 +214,8 @@ So, for further comparison we will use data from group 10 to group 18. Table 1 a
 | MAX30102 |97.05|93.20|95.61|98.44|93.37|96.42|98.01|96.09|99.48|
 | Error[%] |0.26|1.06|0.92|0.76|0.57|0.59|0.40|1.04|6.17|
 
-<p align="center">Table 2 Variance comparision of SpO2 sensed by MAX30102 and Apple Watch</p>
+
+<p align="center">Table 2 Variance comparision</p>
 
 | Mean | #10 | #11 | #12 | #13 | #14 | #15 | #16 | #17 | #18 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -234,12 +235,14 @@ We did five additional groups of testing, and the comparison is shown in Figure 
 </p>
 <p align="center">Figure 12 Comparison of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
 
-<p align="center">Table 3 Variance comparision of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
+<p align="center">Table 3 Variance comparision</p>
 
+<p align="center">
 | Variance | #19 | #20 | #21 | #22 | #23 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|
 |  Watch  |1.00|0.36|0.36|0.49|0.49|
 |  MAX30102  |5.57|4.23|4.31|5.04|1.92|
+</p>
 
 After adding a relatively closed environment, the variance of data measured by MAX30102 is still significantly higher than Apple Watch. We haven't yet found the reason. As for accuracy, we believe MAX30102 could give relatively accurate (less than 2% error) outputs under the right operations.
 
