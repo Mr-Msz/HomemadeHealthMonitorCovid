@@ -1,4 +1,6 @@
-## Homemade Health Monitoring Device for Covid-19
+## Homemade Health Monitoring Device for COVID-19
+
+Group Member: Sizhen Ma, Wenzhuo Sun, Zirui Chen, Shuhan Yang
 
 ### Video Link
 
