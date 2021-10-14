@@ -238,7 +238,7 @@ Emails Received            |  Email Content
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email2.png?raw=true)
 6 emails were received in one measurements | Each email looks like this 
 
-As this is highly inconvenient and inaccurate, instead, we add another feed in Adafruit IO to document the proportion of abnormal data (spo2 < 80) of each 15 seconds measurement window. If this value is higher than 0.5, we will send one alert. This ensures at most one alert is sent during each measurement:
+As this is highly inconvenient and inaccurate, instead, we add another feed in Adafruit IO to document the **proportion** of abnormal data (spo2 < 80) of each 15 seconds measurement window. If this proportion is higher than 0.5, we will send one alert. This ensures at most one alert is sent during each measurement:
 
 Email Content           |  
 :-------------------------:|
