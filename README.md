@@ -124,7 +124,7 @@ Firstly, we set up the heart rate sensor MAX30102 to make sure if it could work 
 Then, we coded to have the sensor collect data. Based on the instructions provided by Maxim Integrated, applying to max30102 library, we developed our own codes to calculate and output the sensed values in the terminal at a sampling frequency of 100 Hz. If the finger is not detected, a message of “Finger not detected” will show up in the terminal and the default values of heart rate and oxygen saturation are 0 and -999, which indicate unsuccessful data collection. If the data is successfully detected, every pair of values detected will be printed out as shown in Figure 2.
 
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_1.png"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2-2.png"/>
 </p>
 <p align="center">Figure 2 Outputs of sensed data in the terminal</p>
 
