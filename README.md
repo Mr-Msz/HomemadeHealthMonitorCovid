@@ -225,10 +225,12 @@ So, we decided to add a cap on the top of our device to see if it would efficien
 
 We did five additional groups of testing, and the comparison is shown in Figure 12 and Table 3.
 
-![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/additiona_test.png?raw=true)
+<p align="center">
+    ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/additiona_test.png?raw=true)
+</p>
 <p align="center">Figure 12 Comparison of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
 
-<p align="center">Table 3 Variance comparision of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p
+<p align="center">Table 3 Variance comparision of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
 | Variance | #19 | #20 | #21 | #22 | #23 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|
 |  Watch  |1.00|0.36|0.36|0.49|0.49|
