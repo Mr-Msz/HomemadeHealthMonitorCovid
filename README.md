@@ -250,7 +250,7 @@ Email Content           |
 :-------------------------:|
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email3.png?raw=true) |
 
-The attached link is the tarten test information page.
+The attached link is the tartan test information page.
 
 ### Code
 ```markdown
