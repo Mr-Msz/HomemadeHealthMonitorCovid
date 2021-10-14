@@ -20,7 +20,7 @@ With the increasing number of novel Coronavirus infections, nucleic acid testing
 
 ● (Based on time) Transfer the data to cloud storage by leveraging IOT
 
-● Compare the device with products already on the market 
+● Compare the measurements of our homemade health monitoring device and Apple Watch
 
 ● Send email alerts to people with abnormal data
 
