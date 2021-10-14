@@ -163,7 +163,7 @@ To achieve this goal, we further modified the codes, connecting to our Adafruit 
 However, there is a problem that the frequency is too high for the IoT device to accept the data. That is, the data rate limit is easily reached, and it’ll stop the program and take some time to reset. In order to solve this problem, we firstly tried to simply decrease the sampling frequency. It surely worked, but as the data rate limit is quire low, it only worked when we lower the sampling frequency to nearly 1 Hz. In this case, the sampling frequency is too low to obtain accurate values. This phenomenon can be explained by Nyquist-Shannon sampling theorem. When we run the sensor every 1 second to satisfy the data rate limit of IoT device, the sampling frequency of 1 Hz is far lower than twice the exact signal frequency, so that we failed to get the accurate values. Faced with the difference of frequency requirements for sampling and uploading to the IoT device, we had to respectively run the sensor and publish the data on IoT device at different frequencies. In the end, we made it by having the sensor collect data every 0.03 second but upload the data to Adafruit IO platform every 0.90 second (sending 1 pair of values after collecting 30 pairs).
 
 <p align="center">
-    <img src="?raw=true"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2-4.png?raw=true"/>
 </p>
 <p align="center">Figure 8 Dashboard Interface</p>
 
