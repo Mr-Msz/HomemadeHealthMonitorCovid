@@ -119,11 +119,12 @@ Firstly, we set up the heart rate sensor MAX30102 to make sure if it could work 
     <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_1.jpg?raw=true"/>
 </p>
 <p align="center">Figure 1 Circuit for MAX30102 sensor</p>
+<p align="center">* Remaining to be updated</p>
 
 Then, we coded to have the sensor collect data. Based on the instructions provided by Maxim Integrated, applying to max30102 library, we developed our own codes to calculate and output the sensed values in the terminal at a sampling frequency of 100 Hz. If the finger is not detected, a message of “Finger not detected” will show up in the terminal and the default values of heart rate and oxygen saturation are 0 and -999, which indicate unsuccessful data collection. If the data is successfully detected, every pair of values detected will be printed out as shown in Figure 2.
 
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_1.jpg?raw=true"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2-2.png"/>
 </p>
 <p align="center">Figure 2 Outputs of sensed data in the terminal</p>
 
@@ -131,7 +132,7 @@ In default, the sensing process lasts for 30 seconds, but it can run for any tim
 In experiments, we found that the detected values are quite unstable, so that it’s hard to judge if the indices are in the normal range. Therefore, we decided to calculate the average values in the sensing period and take them as the results. We then extended the self-designed class for max30102 to store all the data collected and compute for average before stopping the sensor. As the default values are 0 and -999, they will largely influence the average values. That’s why we excluded the extreme values (SpO2 lower than 80) before calculating the average. The averages will also be printed out in the terminal before sensor stops. Figure 3 shows the terminal at the end of the sensing process.
  
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_1.jpg?raw=true"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2-3.png"/>
 </p>
 <p align="center">Figure 3 Outputs of sensed data in the terminal in the end</p>
 
@@ -148,9 +149,10 @@ To achieve this goal, we further modified the codes, connecting to our Adafruit 
 However, there is a problem that the frequency is too high for the IoT device to accept the data. That is, the data rate limit is easily reached, and it’ll stop the program and take some time to reset. In order to solve this problem, we firstly tried to simply decrease the sampling frequency. It surely worked, but as the data rate limit is quire low, it only worked when we lower the sampling frequency to nearly 1 Hz. In this case, the sampling frequency is too low to obtain accurate values. This phenomenon can be explained by Nyquist-Shannon sampling theorem. When we run the sensor every 1 second to satisfy the data rate limit of IoT device, the sampling frequency of 1 Hz is far lower than twice the exact signal frequency, so that we failed to get the accurate values. Faced with the difference of frequency requirements for sampling and uploading to the IoT device, we had to respectively run the sensor and publish the data on IoT device at different frequencies. In the end, we made it by having the sensor collect data every 0.03 second but upload the data to Adafruit IO platform every 0.90 second (sending 1 pair of values after collecting 30 pairs).
 
 <p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/1_1.jpg?raw=true"/>
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/2-4.png"/>
 </p>
 <p align="center">Figure 4 Dashboard Interface</p>
+<p align="center">* Remaining to be updated</p>
 
 Figure 4 shows how the data is displayed on the Adafruit IO platform. There are two feeds, respectively taking the heart rate and oxygen saturation. The block on the left shows the real-time heart rate in bpm. If the value is over 100 or lower than 60, the gauge block will warn in red. Similarly, the other gauge block is for oxygen saturation (SpO2), warning when the value is lower than 90. After the sensing process stops at the given time, the last pair of values uploaded to the IoT device is the average heart rate and oxygen saturation in the period. That is, users can directly read their average health indices by looking at the final values appearing in the dashboard.
 
