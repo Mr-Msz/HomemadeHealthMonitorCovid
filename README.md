@@ -242,10 +242,13 @@ We did five additional groups of testing, and the comparison is shown in Figure 
 
 <p align="center">Table 3 Variance comparision</p>
 
+<div align="center">
 | Variance | #19 | #20 | #21 | #22 | #23 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|
 |  Watch  |1.00|0.36|0.36|0.49|0.49|
 |  MAX30102  |5.57|4.23|4.31|5.04|1.92|
+</div>
+
 
 
 After adding a relatively closed environment, the variance of data measured by MAX30102 is still significantly higher than Apple Watch. We haven't yet found the reason. As for accuracy, we believe MAX30102 could give relatively accurate (less than 2% error) outputs under the right operations.
