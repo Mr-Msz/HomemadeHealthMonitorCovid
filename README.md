@@ -196,11 +196,6 @@ After adding a relatively closed environment, the variance of data measured by M
 ### 3. Email Alerts
 In this part, we will add email sending alert feature. The original thought is send an email whenever a single data point is out of the ordinary (email is sent whenever a spo2 data point is smaller than 90). It turns out, even with the receive restriction of Adafruit IO, a 15 second measurement with 10 Hz sampling rate results in multiple email being sent because of the variance we discussed in previous section:
 
-<p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email1.png?raw=true"/>
-</p>
-<p align="center">6 emails were received in one measurements</p>
-
 Emails Received            |  Email Content
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email2.png?raw=true)
