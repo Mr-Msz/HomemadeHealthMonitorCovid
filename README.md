@@ -190,6 +190,7 @@ In the comparison, we used SpO2 data and we first showed the data in a scatter p
 Group 1-9             |  Group 10-18
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_2.png?raw=true)
+
 <p align="center">Figure 10 Comparison of SpO2 sensed by MAX30102 and Apple Watch</p>
 
 With the help of these graphs, one could easily see that with the help of a wider averaging window, the data points stay closer towards the baseline (red line which means two devices returns the same measurements at the same time). Although the principle it uses is not exactly Simple Moving Average (SMA), the outcome is close, which is smoothen the signal and filtered those data points that are out of the ordinary. To be more specific, combining the practical situations, it acts like a high-pass filter without a settled cutoff frequency.
@@ -200,11 +201,13 @@ Group 1-9             |  Group 10-18
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_2.png?raw=true)
 blue:MAX30102   orange:Apple Watch |blue:MAX30102   orange:Apple Watch 
+
 <p align="center">Figure 11 The Pearson correlation coefficient of SpO2 sensed by MAX30102 and Apple Watch</p>
 
 So, for further comparison we will use data from group 10 to group 18. Table 1 and Table 2 respectively show the mean value and variance comparison of the data collected by MAX30102 and Apple Watch.
 
 <p align="center">Table 1 Mean comparison of SpO2 sensed by MAX30102 and Apple Watch</p>
+
 | Mean | #10 | #11 | #12 | #13 | #14 | #15 | #16 | #17 | #18 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |  Watch  |96.80|94.20|96.50|97.70|93.90|97.00| 98.40|95.10|93.70|
@@ -212,6 +215,7 @@ So, for further comparison we will use data from group 10 to group 18. Table 1 a
 | Error[%] |0.26|1.06|0.92|0.76|0.57|0.59|0.40|1.04|6.17|
 
 <p align="center">Table 2 Variance comparision of SpO2 sensed by MAX30102 and Apple Watch</p>
+
 | Mean | #10 | #11 | #12 | #13 | #14 | #15 | #16 | #17 | #18 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |  Watch  |2.36|0.56|1.45|1.01|0.69|2.20|0.44|2.89|4.21|
@@ -231,6 +235,7 @@ We did five additional groups of testing, and the comparison is shown in Figure 
 <p align="center">Figure 12 Comparison of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
 
 <p align="center">Table 3 Variance comparision of SpO2 sensed by MAX30102 in an updated environment and Apple Watch</p>
+
 | Variance | #19 | #20 | #21 | #22 | #23 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|
 |  Watch  |1.00|0.36|0.36|0.49|0.49|
