@@ -123,7 +123,7 @@ In this part, comparison will be presented on the ability (i.e. accuracy, fluctu
 In the experiment, one variable is tested each time. This is due to the interface of apple watch only allows user to measure one variable at a time (i.e. bpm or spo2). In order to control the variability and uncertainty in each experiment, the test is going to be present simultaneously to one person in the group:
 
 
-The measurements of apple watch will be documented manually due to the easy accessibility (i.e. barely looking) and relative slow reaction speed (the frequency of updates on screen is about 2 – 4 Hz based on the situation of the tester). The measurements of MAX30102 will be documented by Adafruit IO platforms.
+The measurements of apple watch will be documented manually due to the easy accessibility (i.e. barely looking) and relative slow reaction speed (the frequency of updates on screen is about 0.25 – 0.5 Hz (2 - 4 seconds) based on the situation of the tester). The measurements of MAX30102 will be documented by Adafruit IO platforms.
 
 These frequency differences between two devices lead us to another question on the evaluation process. It is not possible to compare raw data. Every data we gather from Apple Watch, approximately 10 data points for MAX30102 will be gathered at the same time. We use the following two ways to keep data from two devices on the same pace:
 
