@@ -157,6 +157,7 @@ Mean Comparison:
 |  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |  Watch  |96.80|94.20|96.50|97.70|93.90|97.00| 98.40|95.10|93.70|
 | MAX30102 |97.05|93.20|95.61|98.44|93.37|96.42|98.01|96.09|99.48|
+| Error[%] |0.26|1.06|0.92|0.76|0.57|0.59|0.4|1.04|6.17|
 
 Variance Comparison
 
@@ -168,8 +169,9 @@ Variance Comparison
 
 
 
-Since we currently don’t have ways to obtain “true labels”, we used Apple Watch’s measurements as our true label. It turns out, apart from group 18, all other groups lie within an error of 1.1% on the mean value. However, this doesn’t mean MAX30102 is comparable towards Apple Watch. This is because the variance difference between two devices in a same group could have huge difference in some cases. We tried to change sample rate and averaging window (These two must change simultaneously under our comparison rule) to address this problem, which didn’t give us an answer. After consideration, we brought out a hypothesis:
-Compares to Apple Watch and other oximeter on market right now, our device measures the light reflection in an ‘open’ environment. Those devices tend to use model characteristics to ensure interference from environment to be as little as possible (i.e., on market oximeter let users put their fingertips into a hole-shape area to ensure full contact and prevent light leak.
+Since we currently don’t have ways to obtain “true labels”, we used Apple Watch’s measurements as our **true label**. It turns out, apart from group 18, all other groups lie within an error of 1.1% on the mean value. However, such pattern doesn’t mean Vanilla MAX30102 is comparable in stability towards Apple Watch. This is because the variance difference between two devices in a same group could have huge fluctuations over groups. We tried to change sample rate and averaging window (These two must change simultaneously under our comparison rule) to address this problem, which didn’t give us an answer. After consideration, we brought out a hypothesis:
+
+Compares to Apple Watch and other oximeter on market right now, our device measures the light reflection in an **‘open’** environment. Those devices tend to use model characteristics to ensure interference from environment to be as little as possible (i.e., on market oximeter let users put their fingertips into a hole-shape area to ensure full contact and prevent light leak).
 
 So, we decided to add a cap on the top of our device to see if it would efficiently increase performance:
 
