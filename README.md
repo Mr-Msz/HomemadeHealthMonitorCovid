@@ -82,15 +82,15 @@ The only one sensor used in this project is MAX30102 heart rate sensor, which ca
 
 ● Ultra-Low Power Operation for Mobile Devices 
 
-> •	Programmable Sample Rate and LED Current for Power Savings 
+ - Programmable Sample Rate and LED Current for Power Savings 
 
-> •	Low-Power Heart-Rate Monitor (< 1mW) 
+ - Low-Power Heart-Rate Monitor (< 1mW) 
 
-> •	Ultra-Low Shutdown Current (0.7μA, typ) 
+ - Ultra-Low Shutdown Current (0.7μA, typ) 
 
 ● Fast Data Output Capability 
 
-> •	High Sample Rates 
+ - High Sample Rates 
 
 ● Robust Motion Artifact Resilience • High SNR 
 
