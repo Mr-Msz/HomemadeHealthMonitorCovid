@@ -25,9 +25,13 @@ With the increasing number of novel Coronavirus infections, nucleic acid testing
 
 ## Progress Report (Last Update 10/14/2021-Progress Report 5)
 [Progress Report 5](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/progress/progress_report_5.md)
+
 [Progress Report 4](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/progress/progress_report_4.md)
+
 [Progress Report 3](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/progress/progress_report_3.md)
+
 [Progress Report 2](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/progress/progress_report_2.md)
+
 [Progress Report 1](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/progress/progress_report_1.md)
 
 ## Methodology
