@@ -148,13 +148,9 @@ In the comparison, we first showed the data in a scatter plot where x-axis stand
 
 With the help of these graphs, one could easily see that
 
-<p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_2.png?raw=true"/>
-</p>
-
-<p align="center">
-    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_1.png?raw=true"/>
-</p>
+Group 1-9             |  Group 10-18
+:-------------------------:|:-------------------------:
+![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_2.png?raw=true)
 
 Mean Comparison:
 
