@@ -140,7 +140,7 @@ Group 1-9             |  Group 10-18
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_2.png?raw=true)
 
-With the help of these graphs, one could easily see that with the help of averaging, the data points stay closer towards the baseline (red line which means two devices returns the same measurements at the same time). Although the principle it uses is not exactly Simple Moving Average (SMA), the outcome is close, which is smoothen the signal and filtered those data points that are out of the ordinary. To be more specific, combining the practical situations, it acts like a high-pass filter without a settled cutoff frequency.
+With the help of these graphs, one could easily see that with the help of a wider averaging window, the data points stay closer towards the baseline (red line which means two devices returns the same measurements at the same time). Although the principle it uses is not exactly Simple Moving Average (SMA), the outcome is close, which is smoothen the signal and filtered those data points that are out of the ordinary. To be more specific, combining the practical situations, it acts like a high-pass filter without a settled cutoff frequency.
 
 
 Same kind of difference can be found if data points from two devices of same group are plotted separately. The Pearson correlation coefficient can be found at the top of each subplot in the figures below (PLEASE RIGHT CLICK THE GRAPH AND OPEN IT IN A NEW TAB FOR A BETTER VIEWING EXPERIENCE).
