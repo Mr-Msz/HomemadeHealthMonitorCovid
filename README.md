@@ -138,28 +138,38 @@ Group 1-9             |  Group 10-18
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/sca_spo2_2.png?raw=true)
 
-With the help of these graphs, one could easily see that
+With the help of these graphs, one could easily see that with the help of averaging, the data points stay closer towards the baseline (red line which means two devices returns the same measurements at the same time). Although the principle it uses is not exactly Simple Moving Average (SMA), the outcome is close, which is smoothen the signal and filtered those data points that are out of the ordinary. To be more specific, combining the practical situations, it acts like a high-pass filter without a settled cutoff frequency.
+
+
+Same kind of difference can be found if data points from two devices of same group are plotted separately. The Pearson correlation coefficient can be found at the top of each subplot in the figures below (PLEASE RIGHT CLICK THE GRAPH AND OPEN IT IN A NEW TAB FOR A BETTER VIEWING EXPERIENCE).
 
 Group 1-9             |  Group 10-18
 :-------------------------:|:-------------------------:
 ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/corr_spo2_2.png?raw=true)
 
+So, for further comparison we will use data from group 10 to group 18:
+
 Mean Comparison:
 
-| Mean | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 |
+| Mean | #10 | #11 | #12 | #13 | #14 | #15 | #16 | #17 | #18 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |  Watch  |96.80|94.20|96.50|97.70|93.90|97.00| 98.40|95.10|93.70|
 | MAX30102 |97.05|93.20|95.61|98.44|93.37|96.42|98.01|96.09|99.48|
 
 Variance Comparison
 
-| Variance | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 |
+| Mean | #10 | #11 | #12 | #13 | #14 | #15 | #16 | #17 | #18 |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |  Watch  |2.36|0.56|1.45|1.01|0.69|2.20|0.44|2.89|4.21|
 | MAX30102 |2.60|2.66|15.50|2.23|5.85|16.09|4.27|4.49|0.17|
 
 
 
+
+Since we currently don’t have ways to obtain “true labels”, we used Apple Watch’s measurements as our true label. It turns out, apart from group 18, all other groups lie within an error of 1.1% on the mean value. However, this doesn’t mean MAX30102 is comparable towards Apple Watch. This is because the variance difference between two devices in a same group could have huge difference in some cases. We tried to change sample rate and averaging window (These two must change simultaneously under our comparison rule) to address this problem, which didn’t give us an answer. After consideration, we brought out a hypothesis:
+Compares to Apple Watch and other oximeter on market right now, our device measures the light reflection in an ‘open’ environment. Those devices tend to use model characteristics to ensure interference from environment to be as little as possible (i.e., on market oximeter let users put their fingertips into a hole-shape area to ensure full contact and prevent light leak.
+
+So, we decided to add a cap on the top of our device to see if it would efficiently increase performance:
 
 
 
