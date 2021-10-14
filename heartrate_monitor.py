@@ -25,7 +25,7 @@ threshold_key = "max30102_threshold"
 
 class HeartRateMonitor(object):
 
-    LOOP_TIME = 0.1
+    LOOP_TIME = 0.03
 
     def __init__(self, print_raw=False, print_result=False):
         self.bpm = 0
