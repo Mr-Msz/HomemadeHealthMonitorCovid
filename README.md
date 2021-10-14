@@ -179,6 +179,8 @@ Compares to Apple Watch and other oximeter on market right now, our device measu
 
 So, we decided to add a cap on the top of our device to see if it would efficiently increase performance:
 
+
+
 We did five additional groups of testing:
 Group 19-23            |
 :-------------------------:|
@@ -188,6 +190,21 @@ Group 19-23            |
 |  :---:  |:---:|:---:|:---:|:---:|:---:|
 |  Watch  |1.00|0.36|0.36|0.49|0.49|
 |  MAX30102  |5.57|4.23|4.31|5.04|1.92|
+
+After adding a relatively closed environment, the variance of data measured by MAX30102 is still significantly higher than Apple Watch. We haven't yet found the reason. As for accuracy, we believe MAX30102 could give relatively accurate (less than 2% error) outputs under the right operations.
+
+### 3. Email Alerts
+In this part, we will add email sending alert feature. The original thought is send an email whenever a single data point is out of the ordinary (email is sent whenever a spo2 data point is smaller than 90). It turns out, even with the receive restriction of Adafruit IO, a 15 second measurement with 10 Hz sampling rate results in multiple email being sent because of the variance we discussed in previous section:
+
+<p align="center">
+    <img src="https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email1.png?raw=true"/>
+</p>
+<p align="center">6 emails were received in one measurements</p>
+
+Emails Received            |  Email Content
+:-------------------------:|:-------------------------:
+![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email1.png?raw=true)  |  ![](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/blob/main/Figure/email2.png?raw=true)
+6 emails were received in one measurements | Each email looks like this 
 
 
 ### Code
