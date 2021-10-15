@@ -377,6 +377,9 @@ class HeartRateMonitor(object):
 ```
 
 ## Discussion
+In this project, our goal is to create something that can help make the COVID-19 test faster, less costly, and with a shorter time to get results. In this way, we tested the user's heart rate and blood oxygen levels with the MAX30102 sensor in this project. Then, to verify the accuracy of our data, we compare it to authoritative sensors like Apple Watch Series 6. We designed the circuit on the Raspberry Pi to let the sensor work and linked the code to the Adafruit IO website for a more user-friendly interface to read the results. Finally, an email connection would make to Adafruit IO via IFTTT, which sends an email to the user to alert them of any abnormalities in their blood oxygen.
+Due to the limitations of the sensors and our coding capabilities, our system still has some flaws. For example, our measured heart rate values were inaccurate, and the resting heart rate did not stay between 60bpm and 100bpm. We tried to use carton shading to solve this problem, but it did not work very well.
+In the future, we believe that there is room for improvement in our detection system as follows. First, we could equip this system with an LCD. In this case, users can more easily know their body condition and various data such as measurement time. Secondly, we can use python crawler to crawl user data and automatically help users to fill in Tartan Daily Self-Assessment information to get a faster response. Finally, the problem of inaccurate heart rate monitoring may be caused by hardware problems such as resistance; we can fuse the resistor to make the sensor work better.
 
 ## References
 [1] Deborah Leader, R. N. (2021, July 22). The importance of O2 sats with COPD. Verywell Health. Retrieved October 5, 2021, from https://www.verywellhealth.com/oxygen-saturation-914796. 
