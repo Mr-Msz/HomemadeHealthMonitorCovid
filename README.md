@@ -2,8 +2,8 @@
 
 Group Member: Sizhen Ma, Wenzhuo Sun, Zirui Chen, Shuhan Yang
 
-### Video Link
-
+### [Video Link](https://www.youtube.com/watch?v=hzheHT5ipYs)
+#### Please Watch in Full Screen, Thank you.
 
 
 ### Introduction
