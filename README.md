@@ -383,7 +383,7 @@ Due to the limitations of the sensors and our coding capabilities, our system st
 
 In the future, we believe that there is room for improvement in our detection system as follows. First, we could equip this system with an LCD. In this case, users can more easily know their body condition and various data such as measurement time. Secondly, we can use python crawler to crawl user data and automatically help users to fill in **related** tests online. Finally, the problem of inaccurate heart rate monitoring may be caused by hardware problems such as resistance; we find that there exists a few examples of re-designing MAX30102 online.
 
-**Data Used to recreate the analysis can be find in our Github Repo**
+**Data and code used to recreate the analysis can be find in our Github Repo** [Link](https://github.com/Mr-Msz/HomemadeHealthMonitorCovid/tree/main/data)
 
 ## References
 [1] Deborah Leader, R. N. (2021, July 22). The importance of O2 sats with COPD. Verywell Health. Retrieved October 5, 2021, from https://www.verywellhealth.com/oxygen-saturation-914796. 
